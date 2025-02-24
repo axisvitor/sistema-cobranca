@@ -1,0 +1,58 @@
+---
+description: Regras para Criacao do nosso sistema
+globs: 
+---
+# CursorRules para o Projeto de Cobrança Automática (Atualizado)
+
+## Regras Gerais
+- **Código Assíncrono:** Utilize sempre `async/await` para operações assíncronas, evitando callbacks.
+- **Formatação Consistente:** Siga as regras de formatação definidas (ESLint, Prettier) e mantenha a nomenclatura em inglês para variáveis, funções e componentes.
+- **Documentação:** Comente funções e classes com clareza; inclua docstrings e comentários explicativos em trechos críticos.
+
+## Regras para o Frontend
+- **Estrutura do Projeto:**  
+  - Organize componentes na pasta `/src/components` e as páginas na pasta `/src/pages`.
+  - Mantenha separação clara entre componentes, serviços e assets.
+- **Bibliotecas e UI:**  
+  - Utilize bibliotecas UI (ex.: Material UI ou Bootstrap) conforme definido no Tech Stack.
+- **Acessibilidade e Responsividade:**  
+  - Garanta que todos os componentes sigam boas práticas de acessibilidade e sejam responsivos a diferentes tamanhos de tela.
+- **Validação de Formulários:**  
+  - Use bibliotecas como Yup e Formik para validar entradas e formulários, especialmente na tela de upload de arquivos.
+
+## Regras para o Backend
+- **Organização da API:**  
+  - Utilize Node.js com Express (ou outra framework conforme definido) e separe o código em módulos: controllers, services, routes e models.
+- **Banco de Dados:**  
+  - **MongoDB:**  
+    - Defina esquemas claros para cada coleção.
+    - Mantenha a consistência dos dados e documente as alterações de esquema.
+- **Caching e Filas:**  
+  - **Redis (30MB):**  
+    - Utilize Redis para caching de dados transitórios e gerenciamento de filas de notificações.
+    - Configure políticas de expiração (TTL) e monitore o uso de memória para evitar estouro.
+- **Segurança:**  
+  - Implemente autenticação via JWT e proteja endpoints sensíveis com middlewares.
+  - Realize validação e sanitização de entradas para prevenir ataques.
+- **Integração com Terceiros:**  
+  - Para a integração com o WhatsApp, use a API não oficial (W-API), mas monitore sua estabilidade e conformidade com os termos de uso.
+- **Tratamento de Erros:**  
+  - Implemente logging (ex.: com Winston) para capturar falhas e possibilitar re-tentativas automáticas.
+
+## Regras de Integração e Infraestrutura
+- **Deploy e CI/CD:**  
+  - Configure pipelines de deploy contínuo (ex.: GitHub Actions) integrados à plataforma Railway.
+  - Certifique-se de que os ambientes possuem SSL, backup regular e monitoramento de desempenho.
+- **Monitoramento e Logs:**  
+  - Registre todas as operações críticas e erros para facilitar a manutenção e identificação de problemas.
+  - Utilize ferramentas de monitoramento (como New Relic ou Datadog) se necessário.
+
+## Regras de Manutenibilidade e Atualizações
+- **Atualizações Constantes:**  
+  - Mantenha os pacotes e dependências atualizados e documente as mudanças.
+- **Migrações de Dados:**  
+  - Qualquer alteração no esquema do MongoDB deve ser acompanhada por scripts de migração.
+- **Repositório de Regras:**  
+  - Documente todas as regras e alterações no diretório `.cursor` para referência e padronização entre a equipe.
+
+Estas regras garantem que o código gerado pelo Cursor esteja alinhado com a arquitetura e os padrões definidos para o sistema, promovendo consistência, segurança e manutenibilidade em todo o projeto.

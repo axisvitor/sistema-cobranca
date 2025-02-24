@@ -1,0 +1,77 @@
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+.venv/
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente e configuração
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Logs e arquivos temporários
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+error.log
+combined.log
+
+# Diretório de uploads e backups
+uploads/
+backups/
+tokens/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos de build e cache
+dist/
+build/
+coverage/
+.cache/
+.next/
+.nuxt/
+.temp/
+
+# Arquivos temporários
+*.tmp
+*.temp
+.cache/
+
+# Arquivos de teste
+coverage/
+.nyc_output/
+
+# Arquivos específicos do WhatsApp
+tokens/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Arquivos do MongoDB
+dump/
+*.mongodb
+
+# Arquivos do Redis
+*.rdb
+*.aof
+redis-data/
+
+# Arquivos do PM2
+.pm2/
+ecosystem.config.js 
